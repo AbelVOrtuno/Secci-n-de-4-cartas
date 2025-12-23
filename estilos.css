@@ -6,3 +6,127 @@
     --tituloCard: helvetica;
     --text: verdana;
 }
+/* Definimos los estilos de la cabecera */
+
+.header{
+    max-width: 70%;
+    width: 70%;
+    margin: 0 auto 6rem;
+}
+.header__titulo{
+    text-align: center;
+    font-family: var(--Titulo);
+    font-style: oblique;
+    font-weight: 100;
+}
+#header__titulo--negritas{
+    font-weight: bold;
+}
+p{
+    color: var(--colorText);
+    font-family: var(--text);
+    line-height: 1.4;
+    font-size: 1rem;
+    text-align: center;
+}
+@media (min-width: 768px) {
+    .header{
+        max-width: 40%;
+    }
+    .header__titulo,
+    .header__titulo--negritas{
+        font-size: 2.5rem;
+    }
+  
+}
+
+/* Preparamos el grid de las tarjetas */
+h2{
+    font-family: var(--tituloCard);
+    color: #4c4e61;
+    margin-bottom: 2rem;
+}
+.textCard{
+    color: black;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+img{
+    position: absolute;
+    bottom: 1.8rem;
+    right: 3rem;
+    width: 2rem;
+}
+.tarjetas__grid{
+    max-width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    
+    justify-items: center;
+    align-items: start;
+    gap: 2rem;
+}
+
+.tarjeta{
+    background-color: white;
+    padding: 3rem;
+    border-radius: 2rem;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+}
+.tarjeta:hover{
+    cursor: pointer;
+    transform: scale(1.1) ;
+    transition: ease .6s ;
+}
+.supervisor{
+    border-top: 5px solid #45d3d3;
+    
+}
+.team-builder{
+    
+    border-top: 5px solid #ea5353;
+}
+.karma{
+    
+    border-top: 5px solid #fcae4a;
+}
+.calculator{
+   
+    border-top: 5px solid #549ef2;
+    
+}
+
+@media (min-width :768px) {
+    .tarjetas__grid{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        align-items: center;
+        gap: 2rem;
+    }
+    .supervisor{
+        grid-column: 1 ;
+        grid-row: 1 / span 2;
+    }
+    .team-builder{
+        grid-column: 2;
+        grid-row: 1;
+    }
+    .karma{
+        grid-column: 2;
+        grid-row: 2;
+        text-align: left;
+    }
+    .calculator{
+        grid-column: 3;
+        grid-row: 1 / span 2;
+    }
+}
+
+/* Estilos del footer */
+a{
+    text-decoration: none;
+}
